@@ -7,16 +7,33 @@ import Stack from '@mui/material/Stack';
 import Feed from './components/Feed';
 import Navbar from './components/Navbar';
 import SideDrawer from './components/Drawer';
+import Reward from './components/Reward';
+import { ThemeProvider, createTheme, Box } from '@mui/material';
 
 function App() {
+  // Optional: Create a custom theme if you need custom breakpoints
+  const theme = createTheme({
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 500,
+        md: 860,
+        lg: 1280,
+        xl: 1920,
+      },
+    },
+  });
   return (
     <div>
-      <Navbar />
-      <Stack direction='row' flexWrap='wrap'>
-        <SideDrawer />
+      <ThemeProvider theme={theme}>
+        <Navbar />
+        <Stack direction='row' flexWrap='wrap' sx={{ overflow: 'hidden' }}>
+          <SideDrawer />
 
-        <Rightbar />
-      </Stack>
+          <Feed />
+          <Rightbar />
+        </Stack>
+      </ThemeProvider>
     </div>
   );
 }

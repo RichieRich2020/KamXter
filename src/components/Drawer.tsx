@@ -27,10 +27,10 @@ const Drawer = () => {
     <>
       <Box
         sx={{
-          display: { xs: 'none', sm: 'block' },
+          display: { xs: 'none', sm: 'none', md: 'block' },
           boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
 
-          width: 330,
+          width: '20%',
           height: '100vh',
           position: 'fixed', // Fixed position
           top: 66, // Start from the top

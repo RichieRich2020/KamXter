@@ -206,7 +206,7 @@ export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
-        position='static'
+        position='fixed'
         sx={{
           backgroundColor: '#ffff',
           color: 'black',
@@ -217,7 +217,8 @@ export default function Navbar() {
             noWrap
             component='div'
             sx={{
-              display: { xs: 'none', sm: 'block' },
+              // display: { xs: 'none', sm: 'block' },
+              display: { xs: 'none', sm: 'none', md: 'Block' },
               color: 'darkblue',
               fontWeight: 'bold',
               fontSize: '24px',
@@ -230,7 +231,7 @@ export default function Navbar() {
             color='inherit'
             aria-label='open drawer'
             onClick={toggleDrawer(true)}
-            sx={{ ml: 2, display: { xs: 'block', sm: 'none' } }}>
+            sx={{ ml: 2, display: { xs: 'block', sm: 'block', md: 'none' } }}>
             <MenuIcon />
           </IconButton>
           <Drawer open={open} onClose={toggleDrawer(false)}>
