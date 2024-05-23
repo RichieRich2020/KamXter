@@ -6,32 +6,44 @@ const Reward = () => {
     return (
       <Box
         sx={{
-          // width: '80',
-          height: '150px',
-
-          mx: 1.5,
-          // py: 2,
-          borderRadius: '20%',
-          backgroundImage: `url(${imgg})`, // Correct syntax for backgroundImage
-          backgroundSize: 'cover', // Cover the entire box
-          backgroundPosition: 'center', // Center the image
-          border: '2px solid black',
+          borderRadius: '10%',
+          display: 'flex',
+          p: 0.5,
+          background:
+            'linear-gradient(45deg, #b78628 0%, #f7d007 50%, #ffdd4b 100%)',
+          justifyContent: 'center',
+          alignContent: 'center',
+          alignItems: 'center',
+          mx: 1,
         }}>
         <Box
           sx={{
-            height: '95%',
-            alignContent: 'flex-end',
-            m: 2,
+            // width: '80',
+            height: '150px',
+
+            // py: 2,
+            borderRadius: '20%',
+            backgroundImage: `url(${imgg})`, // Correct syntax for backgroundImage
+            backgroundSize: 'cover', // Cover the entire box
+            backgroundPosition: 'center', // Center the image
+            // my: 1,
           }}>
           <Box
             sx={{
-              // width: 'fit-content',
-              backgroundColor: '#3fc93f',
-              borderRadius: '20%',
-              py: 1,
-              px: 1,
+              height: '95%',
+              alignContent: 'flex-end',
+              m: 2,
             }}>
-            400 KX
+            <Box
+              sx={{
+                // width: 'fit-content',
+                backgroundColor: '#3fc93f',
+                borderRadius: '20%',
+                py: 1,
+                px: 1,
+              }}>
+              400 KX
+            </Box>
           </Box>
         </Box>
       </Box>

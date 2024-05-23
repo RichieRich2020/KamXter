@@ -9,7 +9,7 @@ import Navbar from './components/Navbar';
 import SideDrawer from './components/Drawer';
 import Reward from './components/Reward';
 import { ThemeProvider, createTheme, Box } from '@mui/material';
-
+import { ChakraProvider } from '@chakra-ui/react';
 function App() {
   // Optional: Create a custom theme if you need custom breakpoints
   const theme = createTheme({
@@ -25,15 +25,17 @@ function App() {
   });
   return (
     <div>
-      <ThemeProvider theme={theme}>
-        <Navbar />
-        <Stack direction='row' flexWrap='wrap' sx={{ overflow: 'hidden' }}>
-          <SideDrawer />
+      <ChakraProvider>
+        <ThemeProvider theme={theme}>
+          <Navbar />
+          <Stack direction='row' flexWrap='wrap' sx={{ overflow: 'hidden' }}>
+            <SideDrawer />
 
-          <Feed />
-          <Rightbar />
-        </Stack>
-      </ThemeProvider>
+            <Feed />
+            <Rightbar />
+          </Stack>
+        </ThemeProvider>
+      </ChakraProvider>
     </div>
   );
 }
