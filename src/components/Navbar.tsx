@@ -29,7 +29,6 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
-import SideDrawer from './Drawer';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -208,8 +207,8 @@ export default function Navbar() {
       <AppBar
         position='fixed'
         sx={{
-          backgroundColor: '#ffff',
-          color: 'black',
+          backgroundColor: '#5ac1de',
+          color: '#fff',
         }}>
         <Toolbar>
           <Typography
@@ -219,7 +218,7 @@ export default function Navbar() {
             sx={{
               // display: { xs: 'none', sm: 'block' },
               display: { xs: 'none', sm: 'none', md: 'Block' },
-              color: 'darkblue',
+              color: '#FFFF',
               fontWeight: 'bold',
               fontSize: '24px',
             }}>
@@ -252,7 +251,7 @@ export default function Navbar() {
             aria-label='open drawer'
             sx={{ ml: 1 }}>
             <SportsEsportsIcon />
-            <Typography
+            {/* <Typography
               noWrap
               component='div'
               sx={{
@@ -261,7 +260,7 @@ export default function Navbar() {
                 fontSize: '14px',
               }}>
               Gaming zone
-            </Typography>
+            </Typography> */}
           </IconButton>
 
           <Box

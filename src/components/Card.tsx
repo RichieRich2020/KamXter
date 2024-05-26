@@ -17,7 +17,7 @@ function SkeletonChildrenDemo(props: { loading?: boolean }) {
   const { loading = false } = props;
 
   return (
-    <div style={{}}>
+    <div>
       <Box
         sx={{
           display: 'flex',

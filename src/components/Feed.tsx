@@ -17,8 +17,8 @@ const MyComponent = styled('div')({
   position: 'relative',
   margin: 'auto',
   overflowY: 'scroll',
-  width: '55%', // Default width//
-
+  width: '65%', // Default width//
+  zIndex: '9',
   // top: 65,
   '@media (max-width: 852px)': {
     margin: 'auto',

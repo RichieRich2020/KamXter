@@ -38,16 +38,18 @@ const Sidbar = () => {
   // const navigate = useNavigate();
   return (
     <Box
-      flex='2'
+      // flex='2'
       display={['none', 'none', 'block']}
-      position='sticky'
-      top='60px'
+      // position='sticky'
+      // top='60px'
       h='110vh'
       overflow='scroll'
-      bgColor={colorMode === 'light' ? 'white' : '#222'}>
+      // widht='30%'
+      // bgColor={colorMode === 'light' ? 'white' : '#222'}
+    >
       <Box
         pt='20px'
-        pl={['10px', '0px']}
+        // pl={['10px', '0px']}
         display='flex'
         flexDir='column'
         gap='20px'>
