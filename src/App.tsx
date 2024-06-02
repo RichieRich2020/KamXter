@@ -2,15 +2,11 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Sidbar from './components/Sidbar';
-import Rightbar from './components/Rightbar';
-import Stack from '@mui/material/Stack';
-import Feed from './components/Feed';
-import Navbar from './components/Navbar';
-import Reward from './components/Reward';
+
 import { ThemeProvider, createTheme, Box } from '@mui/material';
 import { ChakraProvider } from '@chakra-ui/react';
-import Login from './components/Login';
 import AllRoutes from './routes/AllRoutes';
+
 function App() {
   // Optional: Create a custom theme if you need custom breakpoints
   const theme = createTheme({

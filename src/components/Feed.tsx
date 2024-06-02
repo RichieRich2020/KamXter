@@ -10,31 +10,36 @@ import {
 import Reward from './Reward';
 import { styled } from '@mui/system';
 import ThoughtBox from './ThoughtBox';
-import Stack from '@mui/material/Stack';
+import { Stack, useMediaQuery } from '@mui/material';
 import Cardd from './Card';
 
-const MyComponent = styled('div')({
-  position: 'relative',
-  margin: 'auto',
-  overflowY: 'scroll',
-  width: '65%', // Default width//
-  zIndex: '9',
-  // top: 65,
-  '@media (max-width: 852px)': {
-    margin: 'auto',
-    width: '95%', // Width on screens wider than 600px
-    // mt: '800px',
-  },
-});
 const Feed = () => {
-  // const { name } = useSelector(data => data.auth);
+  const isSmallScreen = useMediaQuery('(max-width: 1370px)');
+
+  const MyComponent = styled('div')({
+    position: 'relative',
+
+    margin: isSmallScreen ? '0 auto 0 23%' : '0 auto 0 17%',
+    // ml: isSmallScreen ? '50px' : 'auto',
+
+    overflowY: 'scroll',
+    width: isSmallScreen ? '75%' : '60%', // Default width//
+    zIndex: '9',
+    top: 65,
+
+    '@media (max-width: 852px)': {
+      margin: 'auto',
+      width: '95%', // Width on screens wider than 600px
+      // mt: '800px',
+    },
+  });
   return (
     <MyComponent>
-      <Reward />
-      <Box
+      {/* <Reward /> */}
+      {/* <Box
         sx={{
-          height: '190px',
-        }}></Box>
+          height: '60px',
+        }}></Box> */}
       <Box
         sx={{
           display: 'flex',

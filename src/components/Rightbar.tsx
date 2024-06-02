@@ -26,11 +26,11 @@ const RightBar = () => {
     <Box
       sx={{
         display: { xs: 'none', sm: 'none', md: 'block' },
-        boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
+        // boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
         width: '20%',
         height: '100vh',
         zIndex: 9,
-        backgroundColor: '#ffff',
+        // backgroundColor: '#ffff',
         position: 'fixed', // Fixed position
         top: 66, // Start from the top
         right: 0, // Align to the left side of the screen

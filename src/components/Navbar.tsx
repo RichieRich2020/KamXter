@@ -207,8 +207,8 @@ export default function Navbar() {
       <AppBar
         position='fixed'
         sx={{
-          backgroundColor: '#5ac1de',
-          color: '#fff',
+          backgroundColor: '#FFFF',
+          color: '#000',
         }}>
         <Toolbar>
           <Typography
@@ -218,7 +218,7 @@ export default function Navbar() {
             sx={{
               // display: { xs: 'none', sm: 'block' },
               display: { xs: 'none', sm: 'none', md: 'Block' },
-              color: '#FFFF',
+              color: 'darkblue',
               fontWeight: 'bold',
               fontSize: '24px',
             }}>

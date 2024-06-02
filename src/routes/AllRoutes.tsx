@@ -1,12 +1,14 @@
-import { Container } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Feed from '../components/Feed';
 import LeftSidbar from '../components/LeftSidbar';
 import Login from '../components/Login';
 import Navbar from '../components/Navbar';
+import { Register } from '../components/Register';
+import RewardCard from '../components/RewardCard';
+import RewardSection from '../components/RewardSection';
 import RightBar from '../components/Rightbar';
-import Sidbar from '../components/Sidbar';
 
 const HomeLayout = () => {
   return (
@@ -15,7 +17,7 @@ const HomeLayout = () => {
       <Container>
         <LeftSidbar />
         <Feed />
-        <RightBar />
+        <RewardSection />
       </Container>
     </div>
   );
@@ -27,6 +29,7 @@ const AllRoutes = () => {
       <Routes>
         <Route path='/' element={<HomeLayout />}></Route>
         <Route path='/login' element={<Login />}></Route>
+        <Route path='/register' element={<Register />}></Route>
       </Routes>
     </div>
   );

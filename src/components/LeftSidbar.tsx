@@ -28,7 +28,7 @@ const LeftSidbar = () => {
       <Box
         sx={{
           display: { xs: 'none', sm: 'none', md: 'block' },
-          boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
+          // boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
 
           width: '20%',
           height: '100vh',
