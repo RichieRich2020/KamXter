@@ -59,6 +59,7 @@ export const Register = () => {
     queryFn: fetchUsers,
   });
 
+  console.log(data, 'data');
   const { mutate, isError, status } = useMutation({ mutationFn: registerUser });
 
   const handleSubmit = (event: any) => {
@@ -66,7 +67,6 @@ export const Register = () => {
 
     mutate(formData);
   };
-  console.log(isError, status);
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;

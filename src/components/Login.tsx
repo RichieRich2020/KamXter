@@ -9,6 +9,8 @@ import {
 import imgg from './assets/pexels3.jpg';
 import { styled } from '@mui/system';
 import { useNavigate } from 'react-router-dom';
+import { loginFunction } from '../axiosfile/datafetchfile';
+import { useMutation } from '@tanstack/react-query';
 
 const ResComponent = styled('div')({
   margin: 'auto',
@@ -41,8 +43,32 @@ const LoginCom = styled('div')({
 });
 
 const Login = () => {
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  });
   const navigate = useNavigate();
   const isSmallScreen = useMediaQuery('(max-width: 853px)');
+
+  const handleOnchange = (e: any) => {
+    const { name, value } = e.target;
+
+    setFormData((prev: any) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const { mutate, isError, status } = useMutation({
+    mutationFn: loginFunction,
+  });
+
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
+
+    mutate(formData);
+  };
+
   return (
     <Box
       sx={{
@@ -180,9 +206,10 @@ const Login = () => {
                 id='standard-password-input'
                 label='Email'
                 type='Email'
-                // autoComplete='current-password'
+                name='email'
                 variant={isSmallScreen ? 'filled' : 'standard'}
                 fullWidth
+                onChange={handleOnchange}
                 sx={{
                   mt: 1,
                 }}
@@ -192,8 +219,10 @@ const Login = () => {
                 id='standard-password-input'
                 label='password'
                 type='password'
+                name='password'
                 autoComplete='current-password'
                 variant={isSmallScreen ? 'filled' : 'standard'}
+                onChange={handleOnchange}
                 sx={{
                   mt: 2,
                   // '& .MuiInputBase-root': {
@@ -220,6 +249,7 @@ const Login = () => {
                 }}>
                 <Button
                   type='submit'
+                  onClick={handleSubmit}
                   sx={{
                     mt: 3, // margin-top: 2 (spacing unit from MUI, equivalent to 16px)
                     width: '50%', // width 50%
