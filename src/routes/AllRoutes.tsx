@@ -1,14 +1,15 @@
-import { Box, Container } from '@mui/material';
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import Feed from '../components/Feed';
-import LeftSidbar from '../components/LeftSidbar';
-import Login from '../components/Login';
-import Navbar from '../components/Navbar';
-import { Register } from '../components/Register';
-import RewardCard from '../components/RewardCard';
-import RewardSection from '../components/RewardSection';
-import RightBar from '../components/Rightbar';
+import { Box, Container } from "@mui/material"
+import React from "react"
+import { Route, Routes } from "react-router-dom"
+import Feed from "../components/Feed"
+import LeftSidbar from "../components/LeftSidbar"
+import Login from "../components/Login"
+import Navbar from "../components/Navbar"
+import { Register } from "../components/Register"
+import RewardCard from "../components/RewardCard"
+import RewardSection from "../components/RewardSection"
+import RightBar from "../components/Rightbar"
+import ProductForm from "../components/ProductForm"
 
 const HomeLayout = () => {
   return (
@@ -20,19 +21,20 @@ const HomeLayout = () => {
         <RewardSection />
       </Container>
     </div>
-  );
-};
+  )
+}
 
 const AllRoutes = () => {
   return (
     <div>
       <Routes>
-        <Route path='/' element={<HomeLayout />}></Route>
-        <Route path='/login' element={<Login />}></Route>
-        <Route path='/register' element={<Register />}></Route>
+        <Route path="/" element={<HomeLayout />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/register" element={<Register />}></Route>
+        <Route path="/addproduct" element={<ProductForm />}></Route>
       </Routes>
     </div>
-  );
-};
+  )
+}
 
-export default AllRoutes;
+export default AllRoutes
