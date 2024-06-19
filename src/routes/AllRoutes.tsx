@@ -10,7 +10,6 @@ import RewardCard from "../components/RewardCard"
 import RewardSection from "../components/RewardSection"
 import RightBar from "../components/Rightbar"
 import ProductForm from "../components/ProductForm"
-
 const HomeLayout = () => {
   return (
     <div>
@@ -19,6 +18,7 @@ const HomeLayout = () => {
         <LeftSidbar />
         <Feed />
         <RewardSection />
+        <ProductForm />
       </Container>
     </div>
   )
@@ -31,7 +31,7 @@ const AllRoutes = () => {
         <Route path="/" element={<HomeLayout />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
-        <Route path="/addproduct" element={<ProductForm />}></Route>
+        {/* <Route path="/addproduct" element={<ProductForm />}></Route> */}
       </Routes>
     </div>
   )

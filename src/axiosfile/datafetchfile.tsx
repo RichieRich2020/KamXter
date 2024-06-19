@@ -52,12 +52,11 @@ const registerUser = async (userData: any) => {
 
 const addproduct = async (userData: any) => {
   const response = await axiosInstance.post("api/create/products", userData)
-
   return response.data
 }
 const loginFunction = async (userData: any) => {
   const response = await axiosInstance.post("/api/user/login", userData)
-  return response.data
+  return response
 }
 
 export { fetchUsers, registerUser, loginFunction, addproduct }
